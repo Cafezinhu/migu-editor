@@ -20,7 +20,7 @@ export class EditorGameObject {
     scale = {x: 1, y: 1};
     visible = true;
     zIndex = 0;
-    anchor = Anchor.Center;
+    anchor = {x: 0.5, y: 0.5};
 }
 
 export class EditorSprite extends EditorGameObject {

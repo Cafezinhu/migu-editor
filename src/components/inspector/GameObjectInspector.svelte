@@ -50,43 +50,41 @@
 
 </script>
 
-<div class="p-2">
-    <SimpleRow>
-        Tag
-        <input type="text" class="input input-bordered input-sm w-full" bind:value={tag}>
-    </SimpleRow>
+<SimpleRow>
+    Tag
+    <input type="text" class="input input-bordered input-sm w-full" bind:value={tag}>
+</SimpleRow>
 
-    <SimpleRow>
-        <p class="w-full">Z Index</p>
-        <input type="text" class="input input-bordered input-sm w-full" bind:value={zIndex}>
-    </SimpleRow>
+<SimpleRow>
+    <p class="w-full">Z Index</p>
+    <input type="text" class="input input-bordered input-sm w-full" bind:value={zIndex}>
+</SimpleRow>
 
-    Position
-    <SimpleRow>
-        x
-        <input type="number" class="input input-bordered input-sm w-full" bind:value={x}>
-        y
-        <input type="number" class="input input-bordered input-sm w-full" bind:value={y}>
-    </SimpleRow>
+Position
+<SimpleRow>
+    x
+    <input type="number" class="input input-bordered input-sm w-full" bind:value={x}>
+    y
+    <input type="number" class="input input-bordered input-sm w-full" bind:value={y}>
+</SimpleRow>
 
-    <SimpleRow>
-        Angle
-        <input type="number" class="input input-bordered input-sm w-full" bind:value={angle}>
-    </SimpleRow>
+<SimpleRow>
+    Angle
+    <input type="number" class="input input-bordered input-sm w-full" bind:value={angle}>
+</SimpleRow>
 
-    Scale
-    <SimpleRow>
-        x
-        <input type="number" class="input input-bordered input-sm w-full" bind:value={scaleX}>
-        y
-        <input type="number" class="input input-bordered input-sm w-full" bind:value={scaleY}>
-    </SimpleRow>
+Scale
+<SimpleRow>
+    x
+    <input type="number" class="input input-bordered input-sm w-full" bind:value={scaleX}>
+    y
+    <input type="number" class="input input-bordered input-sm w-full" bind:value={scaleY}>
+</SimpleRow>
 
-    Anchor
-    <SimpleRow>
-        x
-        <input type="number" class="input input-bordered input-sm w-full" bind:value={anchorX}>
-        y
-        <input type="number" class="input input-bordered input-sm w-full" bind:value={anchorY}>
-    </SimpleRow>
-</div>
+Anchor
+<SimpleRow>
+    x
+    <input type="number" class="input input-bordered input-sm w-full" bind:value={anchorX}>
+    y
+    <input type="number" class="input input-bordered input-sm w-full" bind:value={anchorY}>
+</SimpleRow>

@@ -1,9 +1,10 @@
 <script lang="ts">
-	import { onDestroy } from "svelte";
+    import { onDestroy } from "svelte";
 	import { gameObjectsStore, selectedGameObjectStore } from "../stores/stores";
-	import type { EditorGameObject } from "../ts/EditorGameObject";
+	import { GameObjectType, type EditorGameObject } from "../ts/EditorGameObject";
 	import GameObjectIcon from "./GameObjectIcon.svelte";
 	import GameObjectInspector from "./inspector/GameObjectInspector.svelte";
+	import SpriteInspector from "./inspector/SpriteInspector.svelte";
 	import WindowComponent from "./WindowComponent.svelte";
 
     let gameObjectName = '';
@@ -32,6 +33,12 @@
         <div class="w-4"><GameObjectIcon type={selectedGameObject.gameObjectType}/></div>
         <input type="text" class="input w-full h-8" bind:value={gameObjectName}/>
     </div>
-    <GameObjectInspector />
+    <div class="p-2">
+        {#if selectedGameObject.gameObjectType == GameObjectType.GameObject}
+            <GameObjectInspector />
+        {:else if selectedGameObject.gameObjectType == GameObjectType.Sprite}
+            <SpriteInspector />
+        {/if}
+    </div>
 {/if}
 </WindowComponent>

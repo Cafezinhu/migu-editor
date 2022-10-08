@@ -3,6 +3,9 @@
 	import { selectedGameObjectStore } from "../../stores/stores";
 	import SimpleRow from "./SimpleRow.svelte";
 
+    export let allowScale = true;
+    export let allowAnchor = true;
+
     let tag: string;
 
     let x: number;
@@ -73,6 +76,7 @@ Position
     <input type="number" class="input input-bordered input-sm w-full" bind:value={angle}>
 </SimpleRow>
 
+{#if allowScale}
 Scale
 <SimpleRow>
     x
@@ -80,7 +84,9 @@ Scale
     y
     <input type="number" class="input input-bordered input-sm w-full" bind:value={scaleY}>
 </SimpleRow>
+{/if}
 
+{#if allowAnchor}
 Anchor
 <SimpleRow>
     x
@@ -88,3 +94,4 @@ Anchor
     y
     <input type="number" class="input input-bordered input-sm w-full" bind:value={anchorY}>
 </SimpleRow>
+{/if}

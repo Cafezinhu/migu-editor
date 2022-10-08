@@ -1,5 +1,5 @@
 import { Anchor } from "migu-games";
-import type { EditorCollider } from "./EditorCollider";
+import { EditorCollider } from "./EditorCollider";
 
 export enum GameObjectType {
     GameObject,
@@ -55,5 +55,5 @@ export class EditorRigidbody extends EditorGameObject {
     gameObjectType = GameObjectType.Rigidbody;
     type: 'fixed' | 'dynamic' = 'dynamic';
     mass = 1;
-    collider?: EditorCollider;
+    collider = new EditorCollider();
 }

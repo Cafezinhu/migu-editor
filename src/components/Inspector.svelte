@@ -4,6 +4,7 @@
 	import { GameObjectType, type EditorGameObject } from "../ts/EditorGameObject";
 	import GameObjectIcon from "./GameObjectIcon.svelte";
 	import GameObjectInspector from "./inspector/GameObjectInspector.svelte";
+	import RigidBodyInspector from "./inspector/RigidBodyInspector.svelte";
 	import SpriteInspector from "./inspector/SpriteInspector.svelte";
 	import TilingSpriteInspector from "./inspector/TilingSpriteInspector.svelte";
 	import WindowComponent from "./WindowComponent.svelte";
@@ -41,6 +42,8 @@
             <SpriteInspector />
         {:else if selectedGameObject.gameObjectType == GameObjectType.TilingSprite}
             <TilingSpriteInspector />
+        {:else if selectedGameObject.gameObjectType == GameObjectType.Rigidbody}
+            <RigidBodyInspector />
         {/if}
     </div>
 {/if}

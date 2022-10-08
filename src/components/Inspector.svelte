@@ -5,6 +5,7 @@
 	import GameObjectIcon from "./GameObjectIcon.svelte";
 	import GameObjectInspector from "./inspector/GameObjectInspector.svelte";
 	import SpriteInspector from "./inspector/SpriteInspector.svelte";
+	import TilingSpriteInspector from "./inspector/TilingSpriteInspector.svelte";
 	import WindowComponent from "./WindowComponent.svelte";
 
     let gameObjectName = '';
@@ -38,6 +39,8 @@
             <GameObjectInspector />
         {:else if selectedGameObject.gameObjectType == GameObjectType.Sprite}
             <SpriteInspector />
+        {:else if selectedGameObject.gameObjectType == GameObjectType.TilingSprite}
+            <TilingSpriteInspector />
         {/if}
     </div>
 {/if}
